@@ -1,8 +1,2 @@
 # golang
-# golang
-# golang
-# golang
-# golang
-# golang
-# golang
-# golang
+Learning the Go Programming Language
