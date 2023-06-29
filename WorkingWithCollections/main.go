@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	workingWithTypedStruct()
+	workingWithMaps()
 
 }
 
@@ -23,10 +23,11 @@ func workingWithSlices() {
 func workingWithMaps() {
 	var m map[string]int
 	m = map[string]int{"foo": 1, "bar": 2}
-	delete(m, "foo")
 
-	v, ok := m["foo"]
-	fmt.Println(v, ok)
+	if v, ok := m["foo"]; ok {
+		fmt.Println("found", v)
+	}
+
 }
 
 func menuItems() {
@@ -67,4 +68,17 @@ func workingWithTypedStruct() {
 		id:   54,
 	}
 	fmt.Println(s, y)
+}
+
+func personStruct() {
+
+	type Person struct {
+		name string
+		age  int
+	}
+
+	person1 := Person{"John", 12}
+	x := Person{name: "James", age: 42}
+	fmt.Println(person1, x)
+
 }

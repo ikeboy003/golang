@@ -2,12 +2,21 @@ package main
 
 import "fmt"
 
+type T struct {
+	val int
+}
+
+func (p *T) a() {
+	p.val += 1
+}
+func (p T) b() {
+	p.val += 2
+}
 func main() {
-
-	t, g, c := 3, 4, 5
-	changeValueAtPointer(&t, &g, &c)
-
-	fmt.Println(t, g, c)
+	x := T{5}
+	x.a()
+	x.b()
+	fmt.Println(x.val)
 }
 
 func changeValueAtPointer(a ...*int) {
