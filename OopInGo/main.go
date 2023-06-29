@@ -11,3 +11,4 @@ func main() {
 	job.SetJobName("Software Tester")
 	fmt.Println(job)
 }
+
