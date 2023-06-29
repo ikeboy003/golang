@@ -1,0 +1,3 @@
+Why Test?
+Ensure Correctness for application
+Identify errors before users are affected
